@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI til turisme og overnatning i Grønland og Danmark | AI Automation Greenland</title>
+<meta name="description" content="AI-chatbots og automatisering til turoperatører, hoteller og overnatning i Grønland og Danmark. Svar og booking døgnet rundt på gæstens eget sprog, vejrbeskeder og ugerapporter.">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Tobias Albrechtsen">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI til turisme og overnatning | AI Automation Greenland">
+<meta property="og:description" content="AI-chatbots og automatisering til turoperatører, hoteller og overnatning i Grønland og Danmark. Svar og booking døgnet rundt på gæstens eget sprog, vejrbeskeder og ugerapporter.">
+<meta property="og:locale" content="da_DK">
+<meta property="og:url" content="https://aiautomationgreenland.dk/turisme.html">
+<link rel="canonical" href="https://aiautomationgreenland.dk/turisme.html">
+<meta name="theme-color" content="#0a2a43">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE occasion: a confident small-studio website with arctic colour play
+   IDEA a night over the fjord: aurora, ice and the Greenland flag's red, with the eagle as signature
+   PICTURE layered night fjord with aurora and icebergs, a live chat card over the sea; below, an interactive lead flow
+   COLOUR fjord night #0a2a43 dominant, ice #eaf5fb support, Greenland red #d00c33 accent, aurora teal in the sky only
+   TYPE Archivo 800 display + Inter text
+   LAYOUT laptop: title band over a full-width scene, then alternating colour bands; phone: title, scene, buttons, stacked bands */
+:root{color-scheme:light;--night:#0a2a43;--deep:#061b2e;--ice:#eaf5fb;--glacier:#8fd0ee;--red:#d00c33;--ink:#0b1f33;--soft:#4a5f73;--line:#d3e4ef;--white:#fff}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--white);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Archivo,Inter,sans-serif;letter-spacing:-.025em;line-height:1.04;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,6.4vw,76px);font-weight:800}
+h2{font-size:clamp(32px,4.4vw,52px);font-weight:800}
+h3{font-size:21px;font-weight:600;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding-block:clamp(48px,7vw,104px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.lead{font-size:clamp(17px,1.7vw,20px);max-width:58ch}
+.btn{display:inline-flex;align-items:center;gap:10px;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;font:600 16px Inter,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn.red{background:var(--red);color:#fff}
+.btn.red:hover{background:#b00a2b}
+.btn.line{border-color:currentColor;color:inherit;background:transparent}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--glacier);outline-offset:3px}
+.arrow{transition:transform .2s}
+.btn:hover .arrow{transform:translateX(4px)}
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(10,42,67,.94);backdrop-filter:blur(10px);color:#fff}
+nav{display:flex;align-items:center;gap:22px;padding:12px max(5vw,16px);max-width:1340px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;line-height:1.05}
+.logo svg{width:40px;height:40px;flex:none}
+.logo b{font:800 17px Archivo,sans-serif;display:block;letter-spacing:-.01em}
+.wm{color:#fff}.wm i{display:block;font-style:normal;font-size:12px;color:var(--glacier);letter-spacing:.08em}
+.links{display:flex;gap:22px}
+.links a{text-decoration:none;color:#cfe3f1;font-weight:500}
+.links a:hover{color:#fff}
+nav .btn{min-height:44px;padding:0 18px}
+.lang{display:flex;border:1px solid rgba(143,208,238,.4);border-radius:999px;overflow:hidden}
+.lang a{padding:8px 11px;font-size:13px;font-weight:600;text-decoration:none;color:#cfe3f1;min-height:36px;display:flex;align-items:center}
+.lang a[aria-current]{background:#fff;color:var(--night)}
+/* hero */
+.hero{background:var(--night);color:#fff;padding-bottom:0}
+.hero .top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:40px}
+.hero .lead{color:#cfe3f1;margin-top:20px}
+.hero .side{display:grid;gap:18px;justify-items:start}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:8px;flex-wrap:wrap}
+.trust span{border:1px solid rgba(143,208,238,.4);color:#cfe3f1;border-radius:999px;padding:5px 12px;font-size:14px;white-space:nowrap}
+.scene{position:relative;height:clamp(380px,44vw,560px);border-radius:28px 28px 0 0;overflow:hidden}
+.scene>svg{position:absolute;inset:0;width:100%;height:100%}
+.aurora{animation:sway 9s ease-in-out infinite alternate;transform-origin:center}
+@keyframes sway{to{transform:translateX(-40px) skewX(-4deg);opacity:.75}}
+.chat{position:absolute;right:clamp(16px,4vw,48px);bottom:clamp(16px,4vw,44px);width:min(350px,calc(100% - 32px));background:#fff;color:var(--ink);border-radius:20px;box-shadow:0 18px 40px rgba(0,10,25,.45);overflow:hidden;font-size:15px}
+.chat .bar{display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--deep);color:#fff;font-weight:600}
+.chat .bar svg{width:26px;height:26px}
+.chat .on{margin-left:auto;font-size:12px;color:#7fe3b8;font-weight:500}
+.msgs{padding:14px;display:grid;gap:8px}
+.m{padding:9px 12px;border-radius:14px;max-width:86%;line-height:1.4}
+.m.bot{background:var(--ice)}
+.m.me{background:var(--red);color:#fff;justify-self:end}
+.slots{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.slots span{border:1.5px solid var(--night);border-radius:999px;padding:3px 10px;font-size:13px;font-weight:600;white-space:nowrap}
+.slots .pick{background:var(--night);color:#fff}
+.late{opacity:0;animation:pop .4s 1.4s forwards}
+@keyframes pop{to{opacity:1}}
+
+.scen{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.scen button{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:0 18px;min-height:44px;font:600 15px Inter,sans-serif;color:var(--ink);cursor:pointer}
+.scen button[aria-selected=true]{background:var(--red);border-color:var(--red);color:#fff}
+.flow .grid{margin-top:24px}
+.night{position:absolute;left:clamp(16px,4vw,48px);top:clamp(16px,3vw,36px);width:250px;background:rgba(6,27,46,.82);backdrop-filter:blur(6px);border:1px solid rgba(143,208,238,.35);border-radius:18px;padding:14px 16px;color:#fff;font-size:14px}
+.night b{display:block;margin-bottom:6px;font-size:15px}
+.night ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.night li{display:flex;justify-content:space-between;gap:12px;color:#cfe3f1}
+.night li b{display:inline;margin:0;color:#7fe3b8;font-size:14px;white-space:nowrap}
+.branch{background:#fff}
+.bgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+.bgrid div{border:1.5px solid var(--line);border-radius:20px;padding:22px;border-top:6px solid var(--night)}
+.bgrid div:nth-child(3n+2){border-top-color:var(--red)}
+.bgrid div:nth-child(3n){border-top-color:var(--glacier)}
+.bgrid p{color:var(--soft);margin-top:6px}
+@media(max-width:820px){.bgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.bgrid{grid-template-columns:minmax(0,1fr)}.night{display:none}}
+
+.tag.ok{background:#dff5ea;color:#0b6b46}
+.tag.warn{background:#fff1d6;color:#8a5a00}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.stack span{border:1px solid rgba(143,208,238,.45);color:#cfe3f1;border-radius:999px;padding:3px 10px;font-size:13px;white-space:nowrap}
+.stack-l{color:var(--glacier);font-size:13px;font-weight:600;margin-top:2px}
+
+.bgrid div{display:flex;flex-direction:column;gap:10px}
+.bgrid ul{margin:0;padding-left:18px;color:var(--ink)}
+.bgrid li{margin:5px 0;font-size:15px}
+.bgrid .sys{font-size:13px;color:var(--soft);margin-top:auto;padding-top:10px;border-top:1px solid var(--line)}
+.bgrid .sys b{display:block;color:var(--ink);font-size:13px}
+.goto{align-self:flex-start;color:var(--red);font-weight:600;text-decoration:none;font-size:15px;min-height:32px;display:inline-flex;align-items:center}
+.goto:hover{text-decoration:underline}
+.goto.more{color:var(--night);margin-top:-6px}
+/* flow */
+.flow{background:var(--ice)}
+.flow .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(28px,5vw,72px);align-items:center;margin-top:40px}
+.steps{display:grid;gap:10px;list-style:none;padding:0;margin:0}
+.steps button{width:100%;display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:center;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:12px 16px;cursor:pointer;font:inherit;color:var(--ink);min-height:64px}
+.steps .n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--ice);font:800 17px Archivo,sans-serif;color:var(--night)}
+.steps b{display:block;font-size:17px}
+.steps small{color:var(--soft);font-size:14px}
+.steps button[aria-selected=true]{border-color:var(--night);background:var(--night);color:#fff}
+.steps button[aria-selected=true] small{color:#cfe3f1}
+.steps button[aria-selected=true] .n{background:var(--red);color:#fff}
+.stage{background:var(--night);border-radius:28px;padding:clamp(20px,3vw,36px);color:#fff;min-height:380px;display:grid;align-content:center;gap:18px}
+.stage .cap{color:var(--glacier);font-weight:600;font-size:15px}
+.stage .title{font:800 clamp(24px,2.6vw,32px)/1.1 Archivo,sans-serif;letter-spacing:-.02em}
+.card{background:#fff;color:var(--ink);border-radius:16px;padding:16px;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.row:last-child{border:0}
+.row span:first-child{color:var(--soft)}
+.tag{background:#ffe1e7;color:#a10a28;border-radius:999px;padding:2px 10px;font-weight:600;font-size:13px;white-space:nowrap}
+.dots{display:flex;gap:6px}
+.dots i{width:28px;height:4px;border-radius:2px;background:rgba(255,255,255,.25)}
+.dots i.on{background:var(--red)}
+/* promises */
+.promise{background:var(--red);color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:40px}
+.pgrid svg{width:40px;height:40px;margin-bottom:12px}
+.pgrid p{color:#ffe3e8;margin-top:8px}
+/* services */
+.svc-band{background:var(--night);color:#fff}
+.svc-band .lead{color:#cfe3f1;margin-top:16px}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
+.svc article{background:rgba(255,255,255,.06);border:1px solid rgba(143,208,238,.25);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:12px}
+.svc article.hot{background:#fff;color:var(--ink);border-color:#fff}
+.svc .badge{align-self:flex-start;background:var(--red);color:#fff;border-radius:999px;padding:3px 12px;font-size:13px;font-weight:600}
+.svc p,.svc li{color:#cfe3f1}
+.svc .hot p,.svc .hot li{color:var(--soft)}
+.svc ul{margin:0;padding-left:18px}
+.svc li{margin:5px 0}
+.svc .price{color:#fff}.svc .hot .price{color:var(--ink)}
+.price{margin-top:auto;padding-top:14px;border-top:1px solid rgba(143,208,238,.25);font:800 24px Archivo,sans-serif;letter-spacing:-.01em}
+.hot .price{border-color:var(--line)}
+.price small{display:block;font:400 14px Inter,sans-serif;color:#9fc0d6;margin-top:4px}
+.hot .price small{color:var(--soft)}
+.vat{margin-top:22px;font-size:14px;color:#9fc0d6}
+/* tools */
+.tools{background:var(--ice)}
+.cmp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:40px}
+.cmp article{background:#fff;border-radius:22px;padding:28px;border:1px solid var(--line)}
+.cmp .fit{color:var(--red);font-weight:600;margin:6px 0 12px}
+.cmp ul{margin:0;padding-left:18px}
+.cmp li{margin:7px 0}
+.note{margin-top:24px;color:var(--soft);max-width:72ch}
+/* process */
+.proc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:44px;padding:0;list-style:none}
+.proc li{padding-right:22px;position:relative}
+.proc .n{width:48px;height:48px;border-radius:50%;background:var(--night);color:#fff;display:grid;place-items:center;font:800 18px Archivo,sans-serif;margin-bottom:16px;position:relative;z-index:1}
+.proc li:not(:last-child)::after{content:"";position:absolute;top:23px;left:48px;right:0;border-top:2px dashed var(--line)}
+.proc p{color:var(--soft);margin-top:6px}
+/* about */
+.about{background:var(--ice)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+.facts{display:grid;gap:14px;margin-top:28px}
+.facts div{display:grid;grid-template-columns:26px minmax(0,1fr);gap:12px}
+.facts svg{width:24px;height:24px;margin-top:3px}
+.person{background:#fff;border-radius:24px;padding:28px;display:grid;gap:14px;border:1px solid var(--line)}
+.who{display:flex;gap:16px;align-items:center}
+.avatar{width:96px;height:96px;border-radius:50%;background:var(--night);flex:none;overflow:hidden;border:3px solid #fff;box-shadow:0 0 0 2px var(--red)}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.person p{color:var(--soft)}
+.offer{background:var(--night);color:#fff;border-radius:16px;padding:16px 18px}
+.offer p{color:#cfe3f1;margin-top:4px}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags span{background:var(--ice);border-radius:999px;padding:5px 12px;font-size:14px;font-weight:500}
+/* faq */
+.qa{display:grid;gap:10px}
+.qa details{border:1.5px solid var(--line);border-radius:16px;padding:2px 20px;background:#fff}
+.qa details[open]{border-color:var(--night)}
+.qa summary{cursor:pointer;font-weight:600;padding:14px 0;min-height:48px;font-size:17px}
+.qa details p{color:var(--soft);padding-bottom:16px}
+/* contact */
+.contact{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.contact .lead{color:#cfe3f1;margin-top:16px}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:clamp(20px,3vw,32px);display:grid;gap:14px}
+label{font-weight:600;font-size:15px;display:grid;gap:6px}
+input,textarea,select{font:16px Inter,sans-serif;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);width:100%}
+textarea{min-height:110px;resize:vertical}
+.r2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.ok{display:none;background:var(--ice);border-radius:12px;padding:12px 14px;font-weight:500}
+.ok.show{display:block}
+.direct{display:grid;gap:14px;margin-top:30px}
+.direct a{font-weight:600;font-size:19px;text-decoration:none;color:#fff;overflow-wrap:anywhere}
+.direct span{color:var(--glacier);font-size:14px;display:block}
+.small{font-size:14px;color:var(--soft)}
+footer{background:var(--deep);color:#9fc0d6;padding:28px max(5vw,16px);font-size:14px}
+footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center}
+footer a{color:#fff}
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;display:none;background:var(--red);color:#fff;border-radius:999px;padding:0 20px;min-height:54px;align-items:center;gap:8px;font-weight:600;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.3)}
+@media(prefers-reduced-motion:reduce){.aurora,.late{animation:none;opacity:1}html{scroll-behavior:auto}.arrow{transition:none}}
+@media(max-width:980px){.svc{grid-template-columns:minmax(0,1fr)}.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.proc{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}.proc li:nth-child(2)::after{display:none}}
+@media(max-width:820px){.hero .top,.two,.flow .grid{grid-template-columns:minmax(0,1fr)}.stage{order:-1}.links{display:none}}
+@media(max-width:600px){.pgrid,.proc,.cmp,.r2{grid-template-columns:minmax(0,1fr)}.proc li::after{display:none}.scene{height:auto;background:#082238;border-radius:22px 22px 0 0}.scene>svg{position:relative;display:block;height:250px}.chat{position:relative;right:auto;bottom:auto;width:auto;margin:-40px 14px 14px}nav{gap:10px}.logo b{font-size:15px}.logo svg{width:34px;height:34px}nav .btn{display:none}.fab{display:inline-flex}.stage{min-height:0}}
+
+/* industry pages */
+.ihero{background:var(--night);color:#fff;position:relative;overflow:hidden}
+.ihero::after{content:"";position:absolute;right:-120px;top:-80px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(127,227,184,.22),rgba(143,208,238,.08) 45%,transparent 70%);pointer-events:none}
+.ihero .wrap{position:relative;z-index:1}
+.ihero .lead{color:#cfe3f1;margin-top:20px}
+.ihero .cta{margin-top:28px}
+.ihero .trust{margin-top:22px}
+.crumb{font-size:14px;color:var(--glacier);margin-bottom:18px}
+.crumb a{color:var(--glacier)}
+.pains{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:36px}
+.pains div{border:1.5px solid var(--line);border-radius:20px;padding:22px;border-top:6px solid var(--red)}
+.pains p{color:var(--soft);margin-top:8px}
+.cred{margin-top:28px;background:rgba(255,255,255,.06);border:1px solid rgba(143,208,238,.25);border-radius:18px;padding:20px 22px;color:#cfe3f1;max-width:72ch}
+.cred b{color:#fff}
+@media(max-width:980px){.pains{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.pains{grid-template-columns:minmax(0,1fr)}}
+</style>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Service", "name": "AI til turisme og overnatning", "description": "AI-chatbots og automatisering til turoperatører, hoteller og overnatning i Grønland og Danmark. Svar og booking døgnet rundt på gæstens eget sprog, vejrbeskeder og ugerapporter.", "url": "https://aiautomationgreenland.dk/turisme.html", "areaServed": ["Grønland", "Danmark"], "provider": {"@type": "ProfessionalService", "name": "AI Automation Greenland", "url": "https://aiautomationgreenland.dk/", "telephone": "+4591420766", "email": "kontakt@aiautomationgreenland.dk"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kan chatbotten svare turister på deres eget sprog?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Den svarer på dansk, engelsk, tysk og de fleste andre sprog, og den svarer altid på det sprog, gæsten skriver på."}}, {"@type": "Question", "name": "Skal vi betale for drift hele året?", "acceptedAnswer": {"@type": "Answer", "text": "Nej. Turismevirksomheder kan få en sæsonpris, så driften koster mindre i de måneder, hvor der er lukket eller stille."}}, {"@type": "Question", "name": "Virker det med vores bookingsystem?", "acceptedAnswer": {"@type": "Answer", "text": "Som regel ja. Vi kobler os på de fleste bookingsystemer, kalendere og Facebook. Det tjekker vi sammen med jer på den gratis snak."}}, {"@type": "Question", "name": "Hvad sker der, når vejret ændrer planerne?", "acceptedAnswer": {"@type": "Answer", "text": "I beslutter, om en tur aflyses. Systemet sørger for, at alle gæster får besked med det samme og får tilbudt et alternativ."}}, {"@type": "Question", "name": "Hvad hvis en gæst har et særligt behov?", "acceptedAnswer": {"@type": "Answer", "text": "Så svarer chatbotten ud fra jeres regler og sender besked til jer, så I kan forberede det, fx kørestolsadgang eller allergi."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://aiautomationgreenland.dk/"}, {"@type": "ListItem", "position": 2, "name": "Turisme", "item": "https://aiautomationgreenland.dk/turisme.html"}]}]</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<clipPath id="lc"><circle cx="32" cy="32" r="30"/></clipPath>
+<symbol id="mark" viewBox="0 0 64 64">
+<g clip-path="url(#lc)">
+<rect width="64" height="64" fill="#fff"/>
+<rect y="34" width="64" height="30" fill="#d00c33"/>
+<path d="M8 34 A14 14 0 0 1 36 34 Z" fill="#d00c33"/>
+<path d="M8 34 A14 14 0 0 0 36 34 Z" fill="#fff"/>
+<path d="M17 66 L18 50 C18 38 23 27 33 21 C40 17 48 16 53 20 L58 23.5 C61 25.5 62 29.5 60 33 L58 36.5 C57 33.5 55 31.5 52 31.5 L47 32.5 C43 35 40 39 38.5 44 L41 47 L37 47.5 L38 51 L34.5 50.5 L35 55 L31 53 L30 66 Z" fill="#0a2a43"/>
+<path d="M48.5 19 C52.5 18.5 56 20.5 58 23.5 C61 25.5 62 29.5 60 33 L58 36.5 C57 33.5 55 31.5 52 31.5 L47.5 32.2 C47 27 47.3 22 48.5 19 Z" fill="#f2b632"/>
+<circle cx="43" cy="25" r="2" fill="#fff"/>
+<circle cx="43.4" cy="25" r="1" fill="#0a2a43"/>
+<path d="M38 22.4 L46.5 21.6" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+</g>
+<circle cx="32" cy="32" r="30" fill="none" stroke="#0a2a43" stroke-width="2"/>
+</symbol>
+<symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#d00c33"/><path d="M7 12.5l3 3 7-7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/></symbol>
+</defs>
+</svg>
+
+<header>
+<nav aria-label="Hovedmenu">
+<a class="logo" href="index.html"><svg aria-hidden="true"><use href="#mark"/></svg><span class="wm"><b>AI Automation</b><i>GREENLAND</i></span></a>
+<div class="links"><a href="index.html#flow">Løsninger</a><a href="index.html#brancher">Brancher</a><a href="index.html#ydelser">Priser</a><a href="index.html#om">Om os</a></div>
+<div class="lang"><a href="turisme.html" lang="da" aria-current="page">DA</a><a href="en.html" lang="en">EN</a></div>
+<a class="btn red" href="#kontakt">Book et møde</a>
+</nav>
+</header>
+
+<main id="top">
+<section class="band ihero">
+<div class="wrap">
+<p class="crumb"><a href="index.html">Forside</a> › <a href="index.html#brancher">Brancher</a> › Turisme</p>
+<h1>AI til turisme og overnatning</h1>
+<p class="lead">Flere gæster, samme antal hænder. Vi bygger chatbots og automatisering, der svarer gæster på deres eget sprog, booker ture og holder styr på sæsonen, også mens I sover.</p>
+<div class="cta"><a class="btn red" href="#kontakt">Book en gratis snak <span class="arrow">→</span></a><a class="btn line" href="#flow">Se et forløb</a></div>
+<div class="trust"><span>Svar døgnet rundt</span><span>Mange sprog</span><span>Sæsonpris</span><span>Data i EU</span></div>
+</div>
+</section>
+
+<section class="band branch">
+<div class="wrap">
+<h2>Det kender I sikkert</h2>
+<div class="pains"><div><h3>Spørgsmål om natten</h3><p>Gæster fra andre tidszoner skriver, når I sover, og booker et andet sted, hvis svaret ikke kommer.</p></div><div><h3>De samme spørgsmål</h3><p>Pris, påklædning, mødested og afhentning. Det tager timer hver uge at svare på det samme.</p></div><div><h3>Vejret ændrer planerne</h3><p>Når en tur aflyses, skal alle gæster have besked hurtigt og et godt alternativ.</p></div><div><h3>Anmeldelser bliver glemt</h3><p>Glade gæster skriver sjældent en anmeldelse, hvis ingen spørger dem på det rigtige tidspunkt.</p></div></div>
+</div>
+</section>
+
+<section class="band flow" id="flow">
+<div class="wrap">
+<h2>Sådan kan det se ud hos jer</h2>
+<p class="lead" style="margin-top:16px;color:var(--soft)">To eksempler fra en turoperatør: en gæst, der booker om natten, og en ugerapport, der finder årsagen til aflysningerne.</p>
+<div class="scen" id="scen" role="tablist" aria-label="Vælg et eksempel"></div>
+<div class="grid">
+<ol class="steps" role="tablist" aria-label="Trin i eksemplet" id="steps"></ol>
+<div class="stage" id="stage" role="tabpanel" aria-live="polite"></div>
+</div>
+<p class="small" style="margin-top:18px">Eksempler på forløb. Navne, tal og tider er fiktive.</p>
+</div>
+</section>
+
+<section class="band svc-band" id="ydelser">
+<div class="wrap">
+<h2>Løsninger til turisme</h2>
+<p class="lead">Vi starter med det, der giver mest tid tilbage, og bygger videre, når det virker.</p>
+<div class="svc"><article class="hot"><span class="badge">Mest valgt</span><h3>Chatbot med booking</h3><p>Svarer gæster på hjemmesiden og Facebook og booker direkte i jeres kalender.</p><ul><li>Svarer på dansk, engelsk, tysk og flere sprog</li><li>Kender jeres ture, priser og regler</li><li>Sender det særlige videre til jer</li></ul><p class="price">Fra 12.900 kr.<small>+ 995 kr./md. Chatbot uden booking fra 6.900 kr. + 595 kr./md.</small></p></article><article><h3>Automatiske gæstemails</h3><p>Den rigtige besked til gæsten på det rigtige tidspunkt.</p><ul><li>Bekræftelse og påmindelse før turen</li><li>Vejrbesked og alternativ ved aflysning</li><li>Tak og anmodning om anmeldelse efter turen</li></ul><p class="price">Fra 4.900 kr.<small>pr. flow + drift</small></p></article><article><h3>Ugerapport</h3><p>Bookinger, belægning, aflysninger og omsætning samlet ét sted hver mandag.</p><ul><li>Data fra booking, kasse og regnskab</li><li>Afvigelser og årsager forklaret</li><li>Konkrete forslag til ugen</li></ul><p class="price">Fra 4.900 kr.<small>pr. flow + drift</small></p></article></div>
+<p class="vat">Alle priser er ekskl. moms. De første tre kunder får 30 % rabat på opsætningen og ingen binding på driften.</p>
+<p class="cred">I betaler kun for drift i de måneder, I har åbent. <b>Sæsonpris:</b> i vintermånederne kan driften sættes ned, så I ikke betaler fuld pris for en stille periode.</p>
+</div>
+</section>
+
+<section class="band" id="faq">
+<div class="wrap two">
+<div>
+<h2>Spørgsmål fra turisme</h2>
+<p class="lead" style="margin-top:16px;color:var(--soft)">Kan du ikke finde svaret, så skriv til os. Vi svarer inden for én arbejdsdag.</p>
+</div>
+<div class="qa"><details open><summary>Kan chatbotten svare turister på deres eget sprog?</summary><p>Ja. Den svarer på dansk, engelsk, tysk og de fleste andre sprog, og den svarer altid på det sprog, gæsten skriver på.</p></details><details><summary>Skal vi betale for drift hele året?</summary><p>Nej. Turismevirksomheder kan få en sæsonpris, så driften koster mindre i de måneder, hvor der er lukket eller stille.</p></details><details><summary>Virker det med vores bookingsystem?</summary><p>Som regel ja. Vi kobler os på de fleste bookingsystemer, kalendere og Facebook. Det tjekker vi sammen med jer på den gratis snak.</p></details><details><summary>Hvad sker der, når vejret ændrer planerne?</summary><p>I beslutter, om en tur aflyses. Systemet sørger for, at alle gæster får besked med det samme og får tilbudt et alternativ.</p></details><details><summary>Hvad hvis en gæst har et særligt behov?</summary><p>Så svarer chatbotten ud fra jeres regler og sender besked til jer, så I kan forberede det, fx kørestolsadgang eller allergi.</p></details></div>
+</div>
+</section>
+
+<section class="band contact" id="kontakt">
+<div class="wrap two">
+<div>
+<h2>Lad os tage en snak</h2>
+<p class="lead">Fortæl kort, hvad der tager tid i jeres hverdag. Vi vender tilbage inden for én arbejdsdag med et forslag til en gratis snak på 30 minutter.</p>
+<div class="direct">
+<p><span>E-mail</span><a href="mailto:kontakt@aiautomationgreenland.dk">kontakt@aiautomationgreenland.dk</a></p>
+<p><span>Telefon</span><a href="tel:+4591420766">+45 91 42 07 66</a></p>
+</div>
+</div>
+<form id="f" action="https://formspree.io/f/xgakrlqk" method="POST" novalidate>
+<input type="hidden" name="_subject" value="Ny henvendelse fra hjemmesiden (turisme)">
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px">
+<div class="r2">
+<label for="navn">Navn<input id="navn" name="navn" autocomplete="name" required></label>
+<label for="firma">Virksomhed<input id="firma" name="firma" autocomplete="organization"></label>
+</div>
+<label for="email">E-mail<input id="email" name="email" type="email" autocomplete="email" required></label>
+<label for="emne">Hvad er I interesserede i?
+<select id="emne" name="emne"><option>Chatbot til turisme</option><option>AI-chatbot med mødebooking</option><option>Automatisering af arbejdsgange</option><option>AI-gennemgang og workshops</option><option>Ved ikke endnu</option></select></label>
+<label for="besked">Hvad tager tid i jeres hverdag?<textarea id="besked" name="besked"></textarea></label>
+<button class="btn red" type="submit">Send besked <span class="arrow">→</span></button>
+<p class="small">Vi bruger kun dine oplysninger til at svare dig. Læs vores <a href="privatliv.html">privatlivspolitik</a>.</p>
+<p class="ok" id="ok" role="status"></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<span>© <span id="yr">2026</span> AI Automation Greenland v/ Tobias Albrechtsen · Roald Amundsensvej 49, 1., 9210 Aalborg SØ · CVR-nr. 45906922</span>
+<span class="flinks"><a href="turisme.html">AI til turisme</a> · <a href="maritim.html">AI til maritim</a> · </span><a href="privatliv.html">Privatlivspolitik</a>
+</div>
+</footer>
+<a class="fab" href="#kontakt">Skriv til os</a>
+
+<script>
+{
+const SC=[{"name": "Kundeservice", "stack": ["Hjemmeside", "Facebook", "AI-model", "n8n", "Kalender", "CRM", "Mail"], "steps": [{"t": "Henvendelse på flere kanaler", "d": "Facebook kl. 22:47, på engelsk", "cap": "Trin 1 · Henvendelse", "title": "Kunden skriver, mens I sover.", "body": "<div class=\"card\"><div class=\"m me\" style=\"justify-self:start\">Hi! Can we book a boat trip for 6 people in July? One of us uses a wheelchair.<\/div><\/div>"}, {"t": "AI forstår og klassificerer", "d": "Sprog, hensigt og særlige behov", "cap": "Trin 2 · Forståelse", "title": "Beskeden bliver analyseret, før der svares.", "body": "<div class=\"card\"><div class=\"row\"><span>Sprog<\/span><b>Engelsk<\/b><\/div><div class=\"row\"><span>Hensigt<\/span><b>Booking, 6 personer<\/b><\/div><div class=\"row\"><span>Særligt behov<\/span><span class=\"tag warn\">Kørestol<\/span><\/div><div class=\"row\"><span>Sikkerhedstjek<\/span><span class=\"tag ok\">Godkendt<\/span><\/div><\/div>"}, {"t": "Faste regler tjekkes", "d": "Ledighed, adgang og pris", "cap": "Trin 3 · Kontrol", "title": "Systemet beslutter, ikke AI'en.", "body": "<div class=\"card\"><div class=\"row\"><span>Ledige pladser 14/7 kl. 19<\/span><span class=\"tag ok\">8 af 12<\/span><\/div><div class=\"row\"><span>Kørestolsadgang<\/span><span class=\"tag ok\">Kun aftenturen<\/span><\/div><div class=\"row\"><span>Pris fra prislisten<\/span><span class=\"tag ok\">4.500 kr.<\/span><\/div><\/div>"}, {"t": "Svar og booking", "d": "På kundens eget sprog", "cap": "Trin 4 · Booking", "title": "Bookingen er på plads på under et minut.", "body": "<div class=\"card\"><div class=\"m bot\">Yes! The evening trip on 14 July at 7 pm is wheelchair accessible and has room for 6. Total price DKK 4,500. I have reserved the seats and sent a confirmation by email.<\/div><\/div>"}, {"t": "Undtagelse til et menneske", "d": "Kørestol kræver forberedelse", "cap": "Trin 5 · Undtagelse", "title": "Det særlige bliver ikke glemt.", "body": "<div class=\"card\"><div class=\"row\"><span>Besked sendt til<\/span><b>Skipper på SMS<\/b><\/div><div class=\"row\"><span>Opgave<\/span><b>Klargør rampe<\/b><\/div><div class=\"row\"><span>Frist<\/span><span class=\"tag warn\">24 timer før afgang<\/span><\/div><\/div>"}, {"t": "CRM og opfølgning", "d": "Påmindelse, anmeldelse og mersalg", "cap": "Trin 6 · Opfølgning", "title": "Kunden bliver fulgt hele vejen.", "body": "<div class=\"card\"><div class=\"row\"><span>Lead i CRM<\/span><span class=\"tag ok\">Varm<\/span><\/div><div class=\"row\"><span>Påmindelse<\/span><b>48 timer før turen<\/b><\/div><div class=\"row\"><span>Efter turen<\/span><b>Tak og anmodning om anmeldelse<\/b><\/div><\/div>"}]}, {"name": "Rapporter", "stack": ["Booking", "Kasse", "Regnskab", "Webstatistik", "n8n", "AI-model"], "steps": [{"t": "Data fra fire systemer", "d": "Hentet hver søndag nat", "cap": "Trin 1 · Data", "title": "Tallene ligger spredt i fire systemer.", "body": "<div class=\"card\"><div class=\"row\"><span>Bookingsystem<\/span><b>84 bookinger<\/b><\/div><div class=\"row\"><span>Kasseapparat<\/span><b>312 salg<\/b><\/div><div class=\"row\"><span>Regnskab<\/span><b>Ugens udgifter<\/b><\/div><div class=\"row\"><span>Webstatistik<\/span><b>1.940 besøg<\/b><\/div><\/div>"}, {"t": "Datavask", "d": "Dubletter og fejl rettes", "cap": "Trin 2 · Kvalitet", "title": "Rapporten bygger på rene data.", "body": "<div class=\"card\"><div class=\"row\"><span>Dubletter fjernet<\/span><span class=\"tag ok\">6<\/span><\/div><div class=\"row\"><span>Valuta omregnet<\/span><span class=\"tag ok\">EUR og USD til DKK<\/span><\/div><div class=\"row\"><span>Manglende data<\/span><span class=\"tag warn\">1 dag fra kassen<\/span><\/div><\/div>"}, {"t": "Analyse og afvigelser", "d": "Mod sidste uge og sidste år", "cap": "Trin 3 · Analyse", "title": "Systemet finder det, der skiller sig ud.", "body": "<div class=\"card\"><div class=\"row\"><span>Omsætning<\/span><span class=\"tag ok\">+12 % mod sidste uge<\/span><\/div><div class=\"row\"><span>Belægning<\/span><b>78 %<\/b><\/div><div class=\"row\"><span>Aflysninger<\/span><span class=\"tag warn\">+40 %<\/span><\/div><\/div>"}, {"t": "Årsagen findes", "d": "Sammenholdt med vejrdata", "cap": "Trin 4 · Indsigt", "title": "Ikke kun hvad, men hvorfor.", "body": "<div class=\"card\"><div class=\"m bot\">9 af de 11 aflysninger skete på dage med vind over 12 m/s. Overvej at tilbyde en kortere tur i læ på blæsende dage i stedet for at aflyse.<\/div><\/div>"}, {"t": "Ugerapporten lander", "d": "Mandag kl. 07:00", "cap": "Trin 5 · Rapport", "title": "Overblikket venter, når I møder ind.", "body": "<div class=\"card\"><div class=\"row\"><span>Sendt til<\/span><b>Ejer og daglig leder<\/b><\/div><div class=\"row\"><span>Format<\/span><b>Mail og PDF<\/b><\/div><div class=\"row\"><span>Læsetid<\/span><span class=\"tag ok\">2 minutter<\/span><\/div><\/div>"}, {"t": "Konkrete handlinger", "d": "Med ansvarlig og frist", "cap": "Trin 6 · Handling", "title": "Rapporten ender i handling.", "body": "<div class=\"card\"><div class=\"row\"><span>Kortere læ-tur på blæsende dage<\/span><b>Ejer, fredag<\/b><\/div><div class=\"row\"><span>Svar 3 ventende kunder<\/span><b>Kontoret, i dag<\/b><\/div><div class=\"row\"><span>Ryk 2 ubetalte fakturaer<\/span><b>Bogholder, onsdag<\/b><\/div><\/div>"}]}];
+
+const tabsEl=document.getElementById('scen'),ol=document.getElementById('steps'),st=document.getElementById('stage');
+let sc=0,cur=0,timer=null;
+tabsEl.innerHTML=SC.map((s,i)=>`<button type="button" role="tab" aria-selected="${i===0}" data-s="${i}">${s.name}</button>`).join('');
+const renderSteps=()=>{ol.innerHTML=SC[sc].steps.map((x,i)=>`<li><button role="tab" id="tab${i}" aria-controls="stage" aria-selected="${i===0}"><span class="n">${i+1}</span><span><b>${x.t}</b><small>${x.d}</small></span></button></li>`).join('')};
+const show=i=>{cur=i;const steps=SC[sc].steps,x=steps[i];
+ol.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-selected',j===i));
+st.innerHTML=`<p class="cap">${x.cap}</p><p class="title">${x.title}</p>${x.body}<div><p class="stack-l">Systemer i spil</p><div class="stack">${SC[sc].stack.map(t=>`<span>${t}</span>`).join('')}</div></div><div class="dots">${steps.map((_,j)=>`<i class="${j===i?'on':''}"></i>`).join('')}</div>`;};
+const pick=s=>{sc=s;tabsEl.querySelectorAll('button').forEach((b,j)=>b.setAttribute('aria-selected',j===s));renderSteps();show(0)};
+const stop=()=>{clearInterval(timer);timer=null};
+tabsEl.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;stop();pick(+b.dataset.s)});
+ol.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;stop();show(+b.id.slice(3))});
+ol.addEventListener('keydown',e=>{if(e.key!=='ArrowDown'&&e.key!=='ArrowUp')return;e.preventDefault();stop();const n=SC[sc].steps.length,k=(cur+(e.key==='ArrowDown'?1:n-1))%n;show(k);document.getElementById('tab'+k).focus()});
+pick(0);
+const calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const next=()=>{if(cur+1<SC[sc].steps.length)show(cur+1);else pick((sc+1)%SC.length)};
+if(!calm){const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting&&!timer){timer=setInterval(next,3800);io.disconnect();}})},{threshold:.4});io.observe(st);}
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+const FORM_ENDPOINT='https://formspree.io/f/xgakrlqk';
+const f=document.getElementById('f'),ok=document.getElementById('ok');
+f.addEventListener('submit',async e=>{e.preventDefault();const n=f.navn.value.trim(),m=f.email.value.trim();
+if(!n||!/^\S+@\S+\.\S+$/.test(m)){ok.textContent='Udfyld venligst navn og en gyldig e-mail.';ok.classList.add('show');return}
+if(!FORM_ENDPOINT){ok.textContent=`Tak, ${n}. Formularen er en forhåndsvisning og sender ikke endnu. Den kobles til vores mail, når siden går live.`;ok.classList.add('show');return}
+const btn=f.querySelector('button[type=submit]');btn.disabled=true;ok.textContent='Sender …';ok.classList.add('show');
+try{const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{Accept:'application/json'},body:new FormData(f)});
+if(!r.ok)throw new Error(r.status);f.reset();ok.textContent=`Tak, ${n}. Din besked er sendt, og vi vender tilbage inden for én arbejdsdag.`}catch(err){ok.textContent='Beskeden kunne ikke sendes. Skriv i stedet til kontakt@aiautomationgreenland.dk eller ring på +45 91 42 07 66.'}
+btn.disabled=false;});
+}
+</script>
+</body>
+</html>
