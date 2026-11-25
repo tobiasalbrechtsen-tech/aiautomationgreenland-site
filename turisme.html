@@ -213,11 +213,12 @@ textarea{min-height:110px;resize:vertical}
 footer{background:var(--deep);color:#9fc0d6;padding:28px max(5vw,16px);font-size:14px}
 footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center}
 footer a{color:#fff}
+.soc{display:inline-flex;gap:8px}.soc a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(143,208,238,.15);color:#fff}.soc a:hover{background:var(--red)}.soc svg{width:20px;height:20px}
 .fab{position:fixed;right:16px;bottom:16px;z-index:30;display:none;background:var(--red);color:#fff;border-radius:999px;padding:0 20px;min-height:54px;align-items:center;gap:8px;font-weight:600;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.3)}
 @media(prefers-reduced-motion:reduce){.aurora,.late{animation:none;opacity:1}html{scroll-behavior:auto}.arrow{transition:none}}
 @media(max-width:980px){.svc{grid-template-columns:minmax(0,1fr)}.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.proc{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}.proc li:nth-child(2)::after{display:none}}
 @media(max-width:820px){.hero .top,.two,.flow .grid{grid-template-columns:minmax(0,1fr)}.stage{order:-1}.links{display:none}}
-@media(max-width:600px){.pgrid,.proc,.cmp,.r2{grid-template-columns:minmax(0,1fr)}.proc li::after{display:none}.scene{height:auto;background:#082238;border-radius:22px 22px 0 0}.scene>svg{position:relative;display:block;height:250px}.chat{position:relative;right:auto;bottom:auto;width:auto;margin:-40px 14px 14px}nav{gap:10px}.logo b{font-size:15px}.logo svg{width:34px;height:34px}nav .btn{display:none}.fab{display:inline-flex}.stage{min-height:0}}
+@media(max-width:600px){.pgrid,.proc,.cmp,.r2{grid-template-columns:minmax(0,1fr)}.proc li::after{display:none}.scene{height:auto;background:#082238;border-radius:22px 22px 0 0}.scene>svg{position:relative;display:block;height:250px}.chat{position:relative;right:auto;bottom:auto;width:auto;margin:-40px 14px 14px}nav{gap:10px}.logo b{font-size:15px}.logo svg{width:34px;height:34px}nav .btn{display:none}.fab{display:inline-flex}footer{padding-bottom:88px}.stage{min-height:0}}
 
 /* industry pages */
 .ihero{background:var(--night);color:#fff;position:relative;overflow:hidden}
@@ -235,8 +236,9 @@ footer a{color:#fff}
 .cred b{color:#fff}
 @media(max-width:980px){.pains{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.pains{grid-template-columns:minmax(0,1fr)}}
+.kbar{display:block;background:var(--red);color:#fff;text-align:center;padding:9px 16px;font-size:15px;font-weight:600;text-decoration:none}.kbar:hover{background:#b00a2b}.kbar span{text-decoration:underline;margin-left:6px}
 </style>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Service", "name": "AI til turisme og overnatning", "description": "AI-chatbots og automatisering til turoperatører, hoteller og overnatning i Grønland og Danmark. Svar og booking døgnet rundt på gæstens eget sprog, vejrbeskeder og ugerapporter.", "url": "https://aiautomationgreenland.dk/turisme.html", "areaServed": ["Grønland", "Danmark"], "provider": {"@type": "ProfessionalService", "name": "AI Automation Greenland", "url": "https://aiautomationgreenland.dk/", "telephone": "+4591420766", "email": "kontakt@aiautomationgreenland.dk"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kan chatbotten svare turister på deres eget sprog?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Den svarer på dansk, engelsk, tysk og de fleste andre sprog, og den svarer altid på det sprog, gæsten skriver på."}}, {"@type": "Question", "name": "Skal vi betale for drift hele året?", "acceptedAnswer": {"@type": "Answer", "text": "Nej. Turismevirksomheder kan få en sæsonpris, så driften koster mindre i de måneder, hvor der er lukket eller stille."}}, {"@type": "Question", "name": "Virker det med vores bookingsystem?", "acceptedAnswer": {"@type": "Answer", "text": "Som regel ja. Vi kobler os på de fleste bookingsystemer, kalendere og Facebook. Det tjekker vi sammen med jer på den gratis snak."}}, {"@type": "Question", "name": "Hvad sker der, når vejret ændrer planerne?", "acceptedAnswer": {"@type": "Answer", "text": "I beslutter, om en tur aflyses. Systemet sørger for, at alle gæster får besked med det samme og får tilbudt et alternativ."}}, {"@type": "Question", "name": "Hvad hvis en gæst har et særligt behov?", "acceptedAnswer": {"@type": "Answer", "text": "Så svarer chatbotten ud fra jeres regler og sender besked til jer, så I kan forberede det, fx kørestolsadgang eller allergi."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://aiautomationgreenland.dk/"}, {"@type": "ListItem", "position": 2, "name": "Turisme", "item": "https://aiautomationgreenland.dk/turisme.html"}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Service", "name": "AI til turisme og overnatning", "description": "AI-chatbots og automatisering til turoperatører, hoteller og overnatning i Grønland og Danmark. Svar og booking døgnet rundt på gæstens eget sprog, vejrbeskeder og ugerapporter.", "url": "https://aiautomationgreenland.dk/turisme.html", "areaServed": ["Grønland", "Danmark"], "provider": {"@type": "ProfessionalService", "name": "AI Automation Greenland", "sameAs": ["https://www.facebook.com/share/1DgiuVowcd/"], "url": "https://aiautomationgreenland.dk/", "telephone": "+4591420766", "email": "kontakt@aiautomationgreenland.dk"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kan chatbotten svare turister på deres eget sprog?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Den svarer på dansk, engelsk, tysk og de fleste andre sprog, og den svarer altid på det sprog, gæsten skriver på."}}, {"@type": "Question", "name": "Skal vi betale for drift hele året?", "acceptedAnswer": {"@type": "Answer", "text": "Nej. Turismevirksomheder kan få en sæsonpris, så driften koster mindre i de måneder, hvor der er lukket eller stille."}}, {"@type": "Question", "name": "Virker det med vores bookingsystem?", "acceptedAnswer": {"@type": "Answer", "text": "Som regel ja. Vi kobler os på de fleste bookingsystemer, kalendere og Facebook. Det tjekker vi sammen med jer på den gratis snak."}}, {"@type": "Question", "name": "Hvad sker der, når vejret ændrer planerne?", "acceptedAnswer": {"@type": "Answer", "text": "I beslutter, om en tur aflyses. Systemet sørger for, at alle gæster får besked med det samme og får tilbudt et alternativ."}}, {"@type": "Question", "name": "Hvad hvis en gæst har et særligt behov?", "acceptedAnswer": {"@type": "Answer", "text": "Så svarer chatbotten ud fra jeres regler og sender besked til jer, så I kan forberede det, fx kørestolsadgang eller allergi."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://aiautomationgreenland.dk/"}, {"@type": "ListItem", "position": 2, "name": "Turisme", "item": "https://aiautomationgreenland.dk/turisme.html"}]}]</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -260,10 +262,11 @@ footer a{color:#fff}
 </defs>
 </svg>
 
+<a class="kbar" href="kampagne.html">Bliv klar til sæsonen nu, og betal fra måned 4. Kun 3 pladser.<span>Læs mere</span></a>
 <header>
 <nav aria-label="Hovedmenu">
 <a class="logo" href="index.html"><svg aria-hidden="true"><use href="#mark"/></svg><span class="wm"><b>AI Automation</b><i>GREENLAND</i></span></a>
-<div class="links"><a href="index.html#flow">Løsninger</a><a href="index.html#brancher">Brancher</a><a href="index.html#ydelser">Priser</a><a href="index.html#om">Om os</a></div>
+<div class="links"><a href="index.html#flow">Løsninger</a><a href="index.html#brancher">Brancher</a><a href="index.html#ydelser">Priser</a><a href="index.html#om">Om os</a><a href="demo.html">Prøv demo</a></div>
 <div class="lang"><a href="turisme.html" lang="da" aria-current="page">DA</a><a href="en.html" lang="en">EN</a></div>
 <a class="btn red" href="#kontakt">Book et møde</a>
 </nav>
@@ -275,7 +278,7 @@ footer a{color:#fff}
 <p class="crumb"><a href="index.html">Forside</a> › <a href="index.html#brancher">Brancher</a> › Turisme</p>
 <h1>AI til turisme og overnatning</h1>
 <p class="lead">Flere gæster, samme antal hænder. Vi bygger chatbots og automatisering, der svarer gæster på deres eget sprog, booker ture og holder styr på sæsonen, også mens I sover.</p>
-<div class="cta"><a class="btn red" href="#kontakt">Book en gratis snak <span class="arrow">→</span></a><a class="btn line" href="#flow">Se et forløb</a></div>
+<div class="cta"><a class="btn red" href="#kontakt">Book en gratis snak <span class="arrow">→</span></a><a class="btn line" href="demo.html#turisme">Prøv demoen</a></div>
 <div class="trust"><span>Svar døgnet rundt</span><span>Mange sprog</span><span>Sæsonpris</span><span>Data i EU</span></div>
 </div>
 </section>
@@ -305,7 +308,7 @@ footer a{color:#fff}
 <h2>Løsninger til turisme</h2>
 <p class="lead">Vi starter med det, der giver mest tid tilbage, og bygger videre, når det virker.</p>
 <div class="svc"><article class="hot"><span class="badge">Mest valgt</span><h3>Chatbot med booking</h3><p>Svarer gæster på hjemmesiden og Facebook og booker direkte i jeres kalender.</p><ul><li>Svarer på dansk, engelsk, tysk og flere sprog</li><li>Kender jeres ture, priser og regler</li><li>Sender det særlige videre til jer</li></ul><p class="price">Fra 12.900 kr.<small>+ 995 kr./md. Chatbot uden booking fra 6.900 kr. + 595 kr./md.</small></p></article><article><h3>Automatiske gæstemails</h3><p>Den rigtige besked til gæsten på det rigtige tidspunkt.</p><ul><li>Bekræftelse og påmindelse før turen</li><li>Vejrbesked og alternativ ved aflysning</li><li>Tak og anmodning om anmeldelse efter turen</li></ul><p class="price">Fra 4.900 kr.<small>pr. flow + drift</small></p></article><article><h3>Ugerapport</h3><p>Bookinger, belægning, aflysninger og omsætning samlet ét sted hver mandag.</p><ul><li>Data fra booking, kasse og regnskab</li><li>Afvigelser og årsager forklaret</li><li>Konkrete forslag til ugen</li></ul><p class="price">Fra 4.900 kr.<small>pr. flow + drift</small></p></article></div>
-<p class="vat">Alle priser er ekskl. moms. De første tre kunder får 30 % rabat på opsætningen og ingen binding på driften.</p>
+<p class="vat">Alle priser er ekskl. moms. Kunder i Grønland betaler ingen dansk moms. De første tre kunder får 30 % rabat på opsætningen og ingen binding på driften.</p>
 <p class="cred">I betaler kun for drift i de måneder, I har åbent. <b>Sæsonpris:</b> i vintermånederne kan driften sættes ned, så I ikke betaler fuld pris for en stille periode.</p>
 </div>
 </section>
@@ -352,7 +355,7 @@ footer a{color:#fff}
 <footer>
 <div class="wrap">
 <span>© <span id="yr">2026</span> AI Automation Greenland v/ Tobias Albrechtsen · Roald Amundsensvej 49, 1., 9210 Aalborg SØ · CVR-nr. 45906922</span>
-<span class="flinks"><a href="turisme.html">AI til turisme</a> · <a href="maritim.html">AI til maritim</a> · </span><a href="privatliv.html">Privatlivspolitik</a>
+<span class="flinks"><a href="turisme.html">AI til turisme</a> · <a href="maritim.html">AI til maritim</a> · </span><a href="privatliv.html">Privatlivspolitik</a><span class="soc"><a href="https://www.facebook.com/share/1DgiuVowcd/" target="_blank" rel="noopener" aria-label="Følg os på Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.2h2.4l.4-2.9h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.1c-.3 0-1.1-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H8v2.9h2.5V21z"/></svg></a></span>
 </div>
 </footer>
 <a class="fab" href="#kontakt">Skriv til os</a>
@@ -390,5 +393,6 @@ if(!r.ok)throw new Error(r.status);f.reset();ok.textContent=`Tak, ${n}. Din besk
 btn.disabled=false;});
 }
 </script>
+<script type="module" src="chat.js"></script>
 </body>
 </html>

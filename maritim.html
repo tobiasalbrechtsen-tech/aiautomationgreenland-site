@@ -213,11 +213,12 @@ textarea{min-height:110px;resize:vertical}
 footer{background:var(--deep);color:#9fc0d6;padding:28px max(5vw,16px);font-size:14px}
 footer .wrap{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;align-items:center}
 footer a{color:#fff}
+.soc{display:inline-flex;gap:8px}.soc a{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(143,208,238,.15);color:#fff}.soc a:hover{background:var(--red)}.soc svg{width:20px;height:20px}
 .fab{position:fixed;right:16px;bottom:16px;z-index:30;display:none;background:var(--red);color:#fff;border-radius:999px;padding:0 20px;min-height:54px;align-items:center;gap:8px;font-weight:600;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.3)}
 @media(prefers-reduced-motion:reduce){.aurora,.late{animation:none;opacity:1}html{scroll-behavior:auto}.arrow{transition:none}}
 @media(max-width:980px){.svc{grid-template-columns:minmax(0,1fr)}.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.proc{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}.proc li:nth-child(2)::after{display:none}}
 @media(max-width:820px){.hero .top,.two,.flow .grid{grid-template-columns:minmax(0,1fr)}.stage{order:-1}.links{display:none}}
-@media(max-width:600px){.pgrid,.proc,.cmp,.r2{grid-template-columns:minmax(0,1fr)}.proc li::after{display:none}.scene{height:auto;background:#082238;border-radius:22px 22px 0 0}.scene>svg{position:relative;display:block;height:250px}.chat{position:relative;right:auto;bottom:auto;width:auto;margin:-40px 14px 14px}nav{gap:10px}.logo b{font-size:15px}.logo svg{width:34px;height:34px}nav .btn{display:none}.fab{display:inline-flex}.stage{min-height:0}}
+@media(max-width:600px){.pgrid,.proc,.cmp,.r2{grid-template-columns:minmax(0,1fr)}.proc li::after{display:none}.scene{height:auto;background:#082238;border-radius:22px 22px 0 0}.scene>svg{position:relative;display:block;height:250px}.chat{position:relative;right:auto;bottom:auto;width:auto;margin:-40px 14px 14px}nav{gap:10px}.logo b{font-size:15px}.logo svg{width:34px;height:34px}nav .btn{display:none}.fab{display:inline-flex}footer{padding-bottom:88px}.stage{min-height:0}}
 
 /* industry pages */
 .ihero{background:var(--night);color:#fff;position:relative;overflow:hidden}
@@ -235,8 +236,9 @@ footer a{color:#fff}
 .cred b{color:#fff}
 @media(max-width:980px){.pains{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.pains{grid-template-columns:minmax(0,1fr)}}
+.kbar{display:block;background:var(--red);color:#fff;text-align:center;padding:9px 16px;font-size:15px;font-weight:600;text-decoration:none}.kbar:hover{background:#b00a2b}.kbar span{text-decoration:underline;margin-left:6px}
 </style>
-<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Service", "name": "AI til fiskeri og maritim drift", "description": "AI-assistenter til fiskeri, rederier og maritim drift i Grønland og Danmark. Svar fra jeres egne manualer med kildehenvisning, styr på vedligehold og dokumentation klar til syn.", "url": "https://aiautomationgreenland.dk/maritim.html", "areaServed": ["Grønland", "Danmark"], "provider": {"@type": "ProfessionalService", "name": "AI Automation Greenland", "url": "https://aiautomationgreenland.dk/", "telephone": "+4591420766", "email": "kontakt@aiautomationgreenland.dk"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kan AI'en finde på svar, der ikke står i manualen?", "acceptedAnswer": {"@type": "Answer", "text": "Assistenten er bygget til kun at svare ud fra jeres egne dokumenter og viser altid kilden. Findes svaret ikke, siger den det i stedet for at gætte."}}, {"@type": "Question", "name": "Hvad med dårlig forbindelse til søs?", "acceptedAnswer": {"@type": "Answer", "text": "Assistenten kræver internet, fx via satellit. Vi kan samtidig samle de vigtigste procedurer i en mappe, der virker uden forbindelse."}}, {"@type": "Question", "name": "Erstatter den vores procedurer?", "acceptedAnswer": {"@type": "Answer", "text": "Nej. Ved risikabelt arbejde henviser den altid til jeres godkendte procedure. Den gør det hurtigere at finde den rigtige."}}, {"@type": "Question", "name": "Hvem kan se vores dokumenter?", "acceptedAnswer": {"@type": "Answer", "text": "Kun dem, I giver adgang. Vi laver en databehandleraftale, og data holdes inden for EU, hvor det er muligt."}}, {"@type": "Question", "name": "Hvilke systemer kan I koble på?", "acceptedAnswer": {"@type": "Answer", "text": "De fleste: SharePoint, Teams, delte drev, vedligeholdelsessystemer og mail. Det gennemgår vi på den gratis snak."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://aiautomationgreenland.dk/"}, {"@type": "ListItem", "position": 2, "name": "Maritim", "item": "https://aiautomationgreenland.dk/maritim.html"}]}]</script>
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Service", "name": "AI til fiskeri og maritim drift", "description": "AI-assistenter til fiskeri, rederier og maritim drift i Grønland og Danmark. Svar fra jeres egne manualer med kildehenvisning, styr på vedligehold og dokumentation klar til syn.", "url": "https://aiautomationgreenland.dk/maritim.html", "areaServed": ["Grønland", "Danmark"], "provider": {"@type": "ProfessionalService", "name": "AI Automation Greenland", "sameAs": ["https://www.facebook.com/share/1DgiuVowcd/"], "url": "https://aiautomationgreenland.dk/", "telephone": "+4591420766", "email": "kontakt@aiautomationgreenland.dk"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kan AI'en finde på svar, der ikke står i manualen?", "acceptedAnswer": {"@type": "Answer", "text": "Assistenten er bygget til kun at svare ud fra jeres egne dokumenter og viser altid kilden. Findes svaret ikke, siger den det i stedet for at gætte."}}, {"@type": "Question", "name": "Hvad med dårlig forbindelse til søs?", "acceptedAnswer": {"@type": "Answer", "text": "Assistenten kræver internet, fx via satellit. Vi kan samtidig samle de vigtigste procedurer i en mappe, der virker uden forbindelse."}}, {"@type": "Question", "name": "Erstatter den vores procedurer?", "acceptedAnswer": {"@type": "Answer", "text": "Nej. Ved risikabelt arbejde henviser den altid til jeres godkendte procedure. Den gør det hurtigere at finde den rigtige."}}, {"@type": "Question", "name": "Hvem kan se vores dokumenter?", "acceptedAnswer": {"@type": "Answer", "text": "Kun dem, I giver adgang. Vi laver en databehandleraftale, og data holdes inden for EU, hvor det er muligt."}}, {"@type": "Question", "name": "Hvilke systemer kan I koble på?", "acceptedAnswer": {"@type": "Answer", "text": "De fleste: SharePoint, Teams, delte drev, vedligeholdelsessystemer og mail. Det gennemgår vi på den gratis snak."}}]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Forside", "item": "https://aiautomationgreenland.dk/"}, {"@type": "ListItem", "position": 2, "name": "Maritim", "item": "https://aiautomationgreenland.dk/maritim.html"}]}]</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -260,10 +262,11 @@ footer a{color:#fff}
 </defs>
 </svg>
 
+<a class="kbar" href="kampagne.html">Pilotvinter 2027: 0 kr. de første 3 måneder. Kun 3 pladser.<span>Læs mere</span></a>
 <header>
 <nav aria-label="Hovedmenu">
 <a class="logo" href="index.html"><svg aria-hidden="true"><use href="#mark"/></svg><span class="wm"><b>AI Automation</b><i>GREENLAND</i></span></a>
-<div class="links"><a href="index.html#flow">Løsninger</a><a href="index.html#brancher">Brancher</a><a href="index.html#ydelser">Priser</a><a href="index.html#om">Om os</a></div>
+<div class="links"><a href="index.html#flow">Løsninger</a><a href="index.html#brancher">Brancher</a><a href="index.html#ydelser">Priser</a><a href="index.html#om">Om os</a><a href="demo.html">Prøv demo</a></div>
 <div class="lang"><a href="maritim.html" lang="da" aria-current="page">DA</a><a href="en.html" lang="en">EN</a></div>
 <a class="btn red" href="#kontakt">Book et møde</a>
 </nav>
@@ -275,7 +278,7 @@ footer a{color:#fff}
 <p class="crumb"><a href="index.html">Forside</a> › <a href="index.html#brancher">Brancher</a> › Maritim</p>
 <h1>AI til fiskeri og maritim drift</h1>
 <p class="lead">Svaret fra manualen, når der er brug for det. Vi bygger AI-assistenter, der svarer ud fra jeres egne manualer og logbøger, og automatisering, der holder styr på vedligehold og dokumentation.</p>
-<div class="cta"><a class="btn red" href="#kontakt">Book en gratis snak <span class="arrow">→</span></a><a class="btn line" href="#flow">Se et forløb</a></div>
+<div class="cta"><a class="btn red" href="#kontakt">Book en gratis snak <span class="arrow">→</span></a><a class="btn line" href="demo.html#maritim">Prøv demoen</a></div>
 <div class="trust"><span>Svar med kildehenvisning</span><span>Kun jeres egne dokumenter</span><span>Adgangsstyring</span><span>Data i EU</span></div>
 </div>
 </section>
@@ -305,7 +308,7 @@ footer a{color:#fff}
 <h2>Løsninger til maritim drift</h2>
 <p class="lead">Vi starter med én konkret opgave, fx manualerne til hovedmotoren, og udvider, når den virker.</p>
 <div class="svc"><article class="hot"><span class="badge">Mest valgt</span><h3>Videnassistent</h3><p>Besætningen spørger i Teams eller på mobilen og får svar fra jeres egne dokumenter.</p><ul><li>Svarer med kildehenvisning til side og kapitel</li><li>Bruger kun nyeste og godkendte versioner</li><li>Henviser altid til proceduren ved risikabelt arbejde</li></ul><p class="price">Fast pris<small>efter en gratis gennemgang af jeres dokumenter</small></p></article><article><h3>Vedligehold og påmindelser</h3><p>Eftersyn efter driftstimer, så intet bliver glemt.</p><ul><li>Påmindelser ud fra driftstimer og datoer</li><li>Opgaver med ansvarlig og frist</li><li>Alt logført automatisk</li></ul><p class="price">Fra 4.900 kr.<small>pr. flow + drift</small></p></article><article><h3>Klar til syn</h3><p>Dokumentation og udløbsdatoer samlet automatisk.</p><ul><li>Mangler og udløbsdatoer fanget i tide</li><li>Udkast til bookinger, som I godkender</li><li>Samlet mappe til rederi og synsmand</li></ul><p class="price">Fra 4.900 kr.<small>pr. flow + drift</small></p></article></div>
-<p class="vat">Alle priser er ekskl. moms. De første tre kunder får 30 % rabat på opsætningen og ingen binding på driften.</p>
+<p class="vat">Alle priser er ekskl. moms. Kunder i Grønland betaler ingen dansk moms. De første tre kunder får 30 % rabat på opsætningen og ingen binding på driften.</p>
 <p class="cred"><b>Vi kender maskinrummet.</b> Bag AI Automation Greenland står Tobias Albrechtsen, der læser til maskinmester og er vokset op i Sydgrønland. Vi ved, hvordan manualer, logbøger og syn fungerer i praksis.</p>
 </div>
 </section>
@@ -352,7 +355,7 @@ footer a{color:#fff}
 <footer>
 <div class="wrap">
 <span>© <span id="yr">2026</span> AI Automation Greenland v/ Tobias Albrechtsen · Roald Amundsensvej 49, 1., 9210 Aalborg SØ · CVR-nr. 45906922</span>
-<span class="flinks"><a href="turisme.html">AI til turisme</a> · <a href="maritim.html">AI til maritim</a> · </span><a href="privatliv.html">Privatlivspolitik</a>
+<span class="flinks"><a href="turisme.html">AI til turisme</a> · <a href="maritim.html">AI til maritim</a> · </span><a href="privatliv.html">Privatlivspolitik</a><span class="soc"><a href="https://www.facebook.com/share/1DgiuVowcd/" target="_blank" rel="noopener" aria-label="Følg os på Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.2h2.4l.4-2.9h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.1c-.3 0-1.1-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H8v2.9h2.5V21z"/></svg></a></span>
 </div>
 </footer>
 <a class="fab" href="#kontakt">Skriv til os</a>
@@ -390,5 +393,6 @@ if(!r.ok)throw new Error(r.status);f.reset();ok.textContent=`Tak, ${n}. Din besk
 btn.disabled=false;});
 }
 </script>
+<script type="module" src="chat.js"></script>
 </body>
 </html>
