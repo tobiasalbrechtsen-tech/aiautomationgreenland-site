@@ -234,6 +234,20 @@ footer a{color:#fff}
 .ksteps .n{width:40px;height:40px;border-radius:50%;background:var(--night);color:#fff;display:grid;place-items:center;font:800 16px Archivo,sans-serif;margin-bottom:10px}
 .ksteps li:nth-child(2) .n,.ksteps li:nth-child(4) .n{background:var(--red)}
 .ksteps p{color:var(--soft);margin-top:6px;font-size:15px}
+.kex{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:36px}
+.kex article{border:1.5px solid var(--line);border-top:6px solid var(--red);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.kex .who{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--red)}
+.kex h3{font-size:20px}
+.kex p{color:var(--soft);font-size:15px}
+.kex .res{margin-top:auto;padding-top:12px;border-top:1px solid var(--line);color:var(--ink);font-weight:600;font-size:15px}
+.kself{margin-top:56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:32px;align-items:start}
+.kself h3{font-size:clamp(24px,2.6vw,32px)}
+.kself .lead{color:var(--soft);margin-top:10px;font-size:17px}
+.kself ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.kself li{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:14px 18px;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.kself li b{display:block}
+.kself li span{color:var(--soft);font-size:15px}
+.kself li em{font-style:normal;font-weight:700;color:var(--night);white-space:nowrap}
 .kprice{width:100%;border-collapse:collapse;margin-top:32px;background:#fff;border-radius:18px;overflow:hidden;font-size:15px}
 .kprice th,.kprice td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 .kprice th{background:var(--ice);font-weight:600}
@@ -258,7 +272,7 @@ footer a{color:#fff}
 .kways article:first-child .kpris small{color:var(--soft)}
 .kseason{background:var(--red);color:#fff}
 .kseason .lead{color:#ffe3e8;margin-top:14px}
-@media(max-width:980px){.ksteps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:980px){.ksteps{grid-template-columns:repeat(2,minmax(0,1fr))}.kex,.kself{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:700px){.ksteps,.kways{grid-template-columns:minmax(0,1fr)}.kfacts div{min-width:0;flex:1}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hvad koster det, hvis vi stopper efter pilotperioden?", "acceptedAnswer": {"@type": "Answer", "text": "Ingenting. Giver I besked senest den sidste dag i måned 3, betaler I hverken opsætning eller drift. Løsningen slukkes, og jeres data sendes tilbage eller slettes."}}, {"@type": "Question", "name": "Hvorfor er der kun 3 pladser?", "acceptedAnswer": {"@type": "Answer", "text": "Vi bygger hver løsning grundigt og følger den tæt i pilotperioden. Det kan vi kun gøre for tre virksomheder ad gangen."}}, {"@type": "Question", "name": "Er der binding?", "acceptedAnswer": {"@type": "Answer", "text": "Fortsætter I efter pilotperioden, gælder aftalen i 12 måneder, fordi opsætningen betales over den periode. Vil I hellere undgå binding, kan I i stedet vælge 30 % rabat på opsætningen og betale den med det samme."}}, {"@type": "Question", "name": "Hvad hvis vi er i Grønland?", "acceptedAnswer": {"@type": "Answer", "text": "Så gælder præcis det samme. Kunder i Grønland betaler ingen dansk moms, og alt foregår online."}}, {"@type": "Question", "name": "Hvornår skal vi beslutte os?", "acceptedAnswer": {"@type": "Answer", "text": "Senest den 31. januar 2027, eller når de tre pladser er taget."}}]}</script>
@@ -297,14 +311,26 @@ footer a{color:#fff}
 <main id="top">
 <section class="band khero">
 <div class="wrap">
-<p class="kbadge">Pilotvinter 2027 · kun 3 pladser</p>
+<p class="kbadge">Pilotvinter 2027 · <span class="kledige">3 af 3</span> pladser ledige</p>
 <h1>Prøv AI i tre måneder. Betal først, når det virker.</h1>
 <p class="lead">Vi sætter en AI-chatbot eller en automatisering op i jeres virksomhed. De første tre måneder koster 0 kr. Fortsætter I, fordeles opsætningen over 12 måneder, så I aldrig betaler et stort beløb på én gang.</p>
 <div class="cta" style="margin-top:28px"><a class="btn red" href="#kontakt">Book en plads <span class="arrow">→</span></a><a class="btn line" href="demo.html">Prøv demoen først</a></div>
 <div class="kfacts">
 <div><b>0 kr.</b><span>i måned 1–3</span></div>
-<div><b>3</b><span>pladser i alt</span></div>
+<div><b class="kledige">3 af 3</b><span>pladser ledige</span></div>
 <div><b>31. jan.</b><span>frist i 2027</span></div>
+</div>
+</div>
+</section>
+
+<section class="band" id="eksempler">
+<div class="wrap">
+<h2>Hvad kan det gøre for jer?</h2>
+<p class="lead" style="color:var(--soft);margin-top:16px">Tre eksempler på opgaver, vi kan løse i pilotperioden. Vi finder sammen den, der sparer jer mest tid.</p>
+<div class="kex">
+<article><span class="who">Turisme og oplevelser</span><h3>Svarer gæster, mens I sover</h3><p>Kl. 23 spørger en gæst, om der er ledige pladser på bådturen i juli. Chatbotten svarer med det samme, fortæller prisen og booker pladsen.</p><p class="res">Færre tabte bookinger uden for åbningstid</p></article>
+<article><span class="who">Kontor og service</span><h3>Sorterer indbakken for jer</h3><p>Nye mails bliver automatisk sorteret efter emne, og der ligger et udkast til svar klar på de almindelige spørgsmål. I tjekker og trykker send.</p><p class="res">Mindre tid i indbakken hver dag</p></article>
+<article><span class="who">Små virksomheder</span><h3>Tager imod nye kunder</h3><p>En kunde skriver på hjemmesiden eller Facebook. Chatbotten stiller de rigtige spørgsmål og booker et møde direkte i jeres kalender.</p><p class="res">Flere møder uden telefon-ping-pong</p></article>
 </div>
 </div>
 </section>
@@ -319,6 +345,15 @@ footer a{color:#fff}
 <li><span class="n">4</span><b>Måned 4–15</b><p>Fast månedlig betaling: opsætningen fordelt over 12 måneder plus drift.</p></li>
 <li><span class="n">5</span><b>Fra måned 16</b><p>Kun almindelig drift. Opsætningen er betalt.</p></li>
 </ol>
+<div class="kself">
+<div><h3>Hvad skal I selv gøre?</h3><p class="lead">Ikke ret meget. Alt det tekniske klarer vi. Det her er jeres del:</p></div>
+<ul>
+<li><div><b>Gratis snak</b><span>Vi taler om jeres hverdag og finder opgaven.</span></div><em>30 min.</em></li>
+<li><div><b>Send os jeres viden</b><span>Priser, åbningstider og de spørgsmål, I tit får.</span></div><em>ca. 1 time</em></li>
+<li><div><b>Test og giv besked</b><span>Prøv løsningen og sig til, hvis noget skal rettes.</span></div><em>ca. 15 min. om ugen</em></li>
+<li><div><b>Én fast kontaktperson</b><span>Så ved vi, hvem vi skal spørge.</span></div><em>efter behov</em></li>
+</ul>
+</div>
 </div>
 </section>
 
